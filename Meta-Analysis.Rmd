@@ -1,0 +1,45 @@
+---
+title: "Meta-Analysis"
+author: "Zsanett Bahor"
+date: 'Last updated: 13/02/2020'
+output:
+  html_document:
+    self_contained: no
+  pdf_document: default
+---
+
+---
+##Meta-analysis crash course 
+There is an [excellent publication](https://www.ncbi.nlm.nih.gov/pubmed/24099992) about this already, which we highly recommends reading to support this chapter. It's full of lots of exciting equations to help you understand what's going on under the hood. 
+
+First thing's first though: there are a couple of things you should ask yourself before you go ahead with a meta-analysis: 
+
+###Is a meta-analysis appropriate for my data? 
+This is of course the ultimate question and despite what you may have read, heard or previously believe, a meta-analysis does not always have to follow a systematic review and is certainly not always the answer statistically speaking. Let's review the following scenarios. 
+
+####Number of cohorts in your dataset
+If you have fewer than 10 comparisons in your dataset, it is not usually recommended that you go ahead with a meta-analysis. This might seem like an arbitrary number (and yes it sort of is), but it should give you an idea of how important it is to have enough data in order to be able to draw robust and meaningful conclusions. 
+
+####Heterogeneity of my data
+Statistically speaking it is not recommended to do a meta-analysis when the things you are trying to lump together are wildly different. You can and should perform separate analyses if biologically speaking you are looking at very different things. For example, it is not advised to lump together behavioural outcomes and biochemical measurements. 
+Having said that, it is also very interesting to look at what the sources of these differences are. 
+
+####Lack of power to explore data
+If you are looking at the effect of a categorical variable you will have to have enough data in each category for you to be able to make meaningful inferences from the data. So if you have a dataset where you have a large list of treatment drugs for example, where many of them only contribute a handful of comparisons to the entire dataset, you might have to consider grouping some of these drugs based on some sort of a biological reasoning to increase the power of the data in each of your categories.
+
+####Unbalanced data
+Unbalanced data can negatively affect the type of conclusions you can draw. An example of this would be if you had a variable where a large proportion of your studies had one answer and only a few studies had an alternative answer. This would mean your data for that variable were unbalanced and it would be meaningless to look at the effect of this variable using something like metaregression for example as this method assumes that data are balanced.  
+
+####Missing data
+Finally, this is a fairly easy question: do you have all the right data needed to perform a meta-analysis? Do you have a central estimate (i.e. mean), an estimate of error (i.e. SD or SEM) and an idea of the sample this has come from for each of your cohorts within a comparison? If not, these values may in some cases be imputed, but in many cases might have to be excluded from your analysis. Furthermore if you are looking at specific variables and you find that the data is missing for each comparison. 
+
+###Phew, I meet all of the above criteria and think I should go ahead with my meta-analysis
+Great! This is the exciting bit.  
+
+1. Calculating an effect size for each comparison using SMD or NMD 
+2. Weighting effect sizes by precision or some other factor 
+3. Calculating efficacy where more than 1 relevant outcome is reported in the same cohort of animals i.e. nesting outcomes 
+4. Calculating a summary effect size using fixed effects model or random effects model 
+5. Calculating and exploring sources of this heterogeneity by looking at predefined study design characteristics to see if they explain any of it 
+
+Explore the next few chapters to learn more about each of these stages! 
